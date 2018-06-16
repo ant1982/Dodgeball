@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9314CAF6-6DAE-48A6-8EF5-706137EEE116}</ProjectGuid>
+    <RootNamespace>OpenGL_SDLBaseProject</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\t019847g\Documents\test-project-aec\OpenGL_SDL Base Project\gl;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\OpenGL_SDL Base Project\SDL\mixer_include;..\OpenGL_SDL Base Project\SDL\include;..\OpenGL_SDL Base Project\SDL\image_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\OpenGL_SDL Base Project\SDL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Library Include="..\gl\glut32.lib" />
+    <Library Include="SDL\SDL2.lib" />
+    <Library Include="SDL\SDL2main.lib" />
+    <Library Include="SDL\SDL2_image.lib" />
+    <Library Include="SDL\SDL2_mixer.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gl\glut.h" />
+    <ClInclude Include="3DSLoader.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="Commons.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Court.h" />
+    <ClInclude Include="Denzil.h" />
+    <ClInclude Include="Dodgeball.h" />
+    <ClInclude Include="EnemyAttack.h" />
+    <ClInclude Include="EnemyStates.h" />
+    <ClInclude Include="FSMObject.h" />
+    <ClInclude Include="GameControls.h" />
+    <ClInclude Include="GameHUD.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameOverScreen.h" />
+    <ClInclude Include="GameScreen.h" />
+    <ClInclude Include="GameScreenLevel1.h" />
+    <ClInclude Include="GameScreenLevel2.h" />
+    <ClInclude Include="GameScreenManager.h" />
+    <ClInclude Include="GameVictory.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="Level1.h" />
+    <ClInclude Include="MenuHUD.h" />
+    <ClInclude Include="object3DS.h" />
+    <ClInclude Include="RobotBaseClass.h" />
+    <ClInclude Include="RobotHand.h" />
+    <ClInclude Include="RobotLowerArm.h" />
+    <ClInclude Include="RobotUpperArm.h" />
+    <ClInclude Include="SoundEffect.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="WinZone.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3DSLoader.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Court.cpp" />
+    <ClCompile Include="Denzil.cpp" />
+    <ClCompile Include="Dodgeball.cpp" />
+    <ClCompile Include="EnemyAttack.cpp" />
+    <ClCompile Include="EnemyStates.cpp" />
+    <ClCompile Include="FSMObject.cpp" />
+    <ClCompile Include="GameControls.cpp" />
+    <ClCompile Include="GameHUD.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameOverScreen.cpp" />
+    <ClCompile Include="GameScreen.cpp" />
+    <ClCompile Include="GameScreenLevel1.cpp" />
+    <ClCompile Include="GameScreenLevel2.cpp" />
+    <ClCompile Include="GameScreenManager.cpp" />
+    <ClCompile Include="GameVictory.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Level1.cpp" />
+    <ClCompile Include="MenuHUD.cpp" />
+    <ClCompile Include="object3DS.cpp" />
+    <ClCompile Include="RobotBaseClass.cpp" />
+    <ClCompile Include="RobotHand.cpp" />
+    <ClCompile Include="RobotLowerArm.cpp" />
+    <ClCompile Include="RobotUpperArm.cpp" />
+    <ClCompile Include="SoundEffect.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="WinZone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassExtract.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
